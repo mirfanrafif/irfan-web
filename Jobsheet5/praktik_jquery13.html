@@ -12,7 +12,7 @@
 
       function showNextImage() {
         i++;
-        $("#sliderTitle" + i)
+        $("#sliderImage" + i)
           .appendTo("#slider")
           .fadeIn(1100)
           .delay(1100)
@@ -30,23 +30,14 @@
   </head>
   <body>
     <div id="slider">
-      <img
-        src="img/Screenshot from 2019-09-16 12-52-11.png"
-        id="sliderImage1"
-      />
+      <img src="img/arch.jpeg" id="sliderImage1" />
       <div class="sliderTitle" id="title1">Gambar 1</div>
 
-      <img
-        src="img/Screenshot from 2019-09-18 07-34-54.png"
-        id="sliderImage2"
-      />
+      <img src="img/animals.jpeg" id="sliderImage2" />
       <div class="sliderTitle" id="title2">Gambar 2</div>
 
-      <img
-        src="img/Screenshot from 2019-09-18 07-44-29.png"
-        id="sliderImage3"
-      />
-      <div class="sliderTitle" id="title3"></div>
+      <img src="img/tech.jpeg" id="sliderImage3" />
+      <div class="sliderTitle" id="title3">Gambar 3</div>
     </div>
   </body>
 </html>
