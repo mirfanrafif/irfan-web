@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="tugas_style.css" />
+    <script src="jquery/jquery-3.4.1.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css" />
+    <script>
+      $(document).ready(function() {
+        $("#tabs").tabs();
+
+        $("#date").datepicker();
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <img src="img/traveloka_logo.png" class="logo" />
+      <img src="img/menu.svg" class="menu" />
+      <div class="right-item" id="discount">
+        <img src="img/discount.svg" class="icon" />
+        <p class="icon-label">Diskon</p>
+      </div>
+      <div class="right-item" id="inbox">
+        <img src="img/inbox.svg" class="icon" />
+        <p class="icon-label">Inbox</p>
+      </div>
+      <div class="right-item" id="saved">
+        <img src="img/bookmark.svg" class="icon" />
+        <p class="icon-label">Saved</p>
+      </div>
+      <div class="right-item" id="myBooking">
+        <img src="img/notebook.svg" class="icon" />
+        <p class="icon-label">My Booking</p>
+      </div>
+      <div class="right-item" id="country">
+        <img src="img/indonesia.svg" class="icon" />
+        <p class="icon-label">IDR</p>
+      </div>
+      <div class="right-item" id="pay">
+        <img src="img/dove.svg" class="icon" />
+        <p class="icon-label">Pay</p>
+      </div>
+      <div id="login">
+        <button id="login">Login</button>
+      </div>
+      <div id="register">
+        <button id="register">Register</button>
+      </div>
+    </div>
+
+    <!-- Top Nav -->
+    <div class="topnav">
+      <div class="topnav-item" id="trans">
+        <p>Transportasi</p>
+        <img src="img/sort-down.svg" class="icon" />
+      </div>
+
+      <div class="topnav-item" id="inap">
+        <p>Tempat menginap</p>
+        <img src="img/sort-down.svg" class="icon" />
+      </div>
+
+      <div class="topnav-item" id="hiburan">
+        <p>Aktivitas Dan Hiburan</p>
+        <img src="img/sort-down.svg" class="icon" />
+      </div>
+
+      <div class="topnav-item" id="tagihan">
+        <p>Tagihan dan Isi ulang</p>
+        <img src="img/sort-down.svg" class="icon" />
+      </div>
+
+      <div class="topnav-item" id="tambahan">
+        <p>Produk Tambahan</p>
+        <img src="img/sort-down.svg" class="icon" />
+      </div>
+    </div>
+
+    <div
+      style="width: 100%; height: 64px; background-color: #1ba0e1; position: absolute; top: 96px;"
+    ></div>
+
+    <div class="pesen">
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Tiket Pesawat</a></li>
+          <li><a href="#tabs-2">Pesawat + Hotel</a></li>
+        </ul>
+        <div id="tabs-1">
+          <div>
+            <input type="radio" name="radio-1" id="radio-1" />
+            <label for="radio-1">Sekali Jalan / Pulang Pergi</label>
+            <input type="radio" name="radio-1" id="radio-1" />
+            <label for="radio-1">Multi Kota</label>
+          </div>
+
+          <div class="group" id="kotaAsal">
+            <p>Kota Asal</p>
+            <input type="text" />
+          </div>
+
+          <div class="group" id="kotaTujuan">
+            <p>Kota Tujuan</p>
+            <input type="text" />
+          </div>
+
+          <div class="group" id="penumpang">
+            <p>Jumlah Penumpang</p>
+            <input type="text" />
+          </div>
+
+          <div class="group" id="tanggalPergi">
+            <p>Tanggal Pergi</p>
+            <input type="text" id="date" />
+          </div>
+
+          <div class="group" id="kelasPenerbangan">
+              <p>Kelas Penerbangan</p>
+              <input type="text" />
+            </div>
+
+          <br /><br /><br /><br />
+          <br /><br /><br /><br />
+          <br /><br /><br /><br />
+          <br /><br /><br /><br />
+          <br /><br /><br /><br />
+        </div>
+        <div id="tabs-2">
+          <p>
+            Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida
+            ante, ut pharetra massa metus id nunc. Duis scelerisque molestie
+            turpis. Sed fringilla, massa eget luctus malesuada, metus eros
+            molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet
+            fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam.
+            Praesent in eros vestibulum mi adipiscing adipiscing. Morbi
+            facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut
+            posuere viverra nulla. Aliquam erat volutpat. Pellentesque
+            convallis. Maecenas feugiat, tellus pellentesque pretium posuere,
+            felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris
+            consectetur tortor et purus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

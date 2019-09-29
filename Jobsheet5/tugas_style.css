@@ -1,0 +1,224 @@
+body {
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+p {
+  margin: 0px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffffff;
+}
+
+.logo {
+  position: absolute;
+  width: 212px;
+  height: 37px;
+  left: 31px;
+  top: 5px;
+  object-fit: scale-down;
+}
+
+.menu {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 50px;
+  top: 13px;
+}
+
+.right-item .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.right-item {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 10px;
+}
+
+.right-item#discount {
+  right: 763px;
+}
+
+.right-item#inbox {
+  right: 652px;
+}
+
+.right-item#saved {
+  right: 541px;
+}
+
+.right-item#myBooking {
+  right: 430px;
+}
+
+.right-item#country {
+  right: 319px;
+}
+
+.right-item#pay {
+  right: 228px;
+}
+
+button {
+  position: absolute;
+  padding: 10px;
+  top: 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+button#login {
+  background-color: #1ba0e1;
+  color: white;
+  right: 120px;
+  border: none;
+}
+
+button#register {
+  background-color: white;
+  border: 1px solid #1ba0e1;
+  color: #1ba0e1;
+  right: 40px;
+}
+
+.icon-label {
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  width: 64px;
+  height: 25px;
+  margin: 0px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.topnav {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  left: 0px;
+  top: 48px;
+  background: #ededed;
+}
+
+.topnav-item {
+  position: absolute;
+  top: 15px;
+}
+
+.topnav-item#trans {
+  left: 50px;
+}
+
+.topnav-item#trans .icon {
+  left: 100px;
+}
+
+.topnav-item#inap {
+  left: 200px;
+}
+
+.topnav-item#inap .icon {
+  left: 135px;
+}
+
+.topnav-item#hiburan {
+  left: 390px;
+}
+
+.topnav-item#hiburan .icon {
+  left: 160px;
+}
+
+.topnav-item#tagihan {
+  left: 610px;
+}
+
+.topnav-item#tagihan .icon {
+  left: 160px;
+}
+
+.topnav-item#tambahan {
+  left: 820px;
+}
+
+.topnav-item#tambahan .icon {
+  left: 140px;
+}
+
+.topnav-item .icon {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 4px;
+  opacity: 0.5;
+}
+
+.pesen {
+  position: absolute;
+  width: 956px;
+  height: 400px;
+  left: calc(50% - 956px / 2 + 0.5px);
+  top: 125px;
+
+  background: white;
+}
+
+.group#kotaAsal {
+  position: absolute;
+  left: 31px;
+  top: 100px;
+}
+
+.group#tanggalPergi {
+  position: absolute;
+  left: 31px;
+  top: 200px;
+}
+
+.group#kelasPenerbangan {
+  position: absolute;
+  left: 550px;
+  top: 200px;
+}
+
+.group input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #1ba0e1;
+}
+
+.group#kotaTujuan {
+  position: absolute;
+  left: 290px;
+  top: 100px;
+}
+
+.group#penumpang {
+  position: absolute;
+  left: 550px;
+  top: 100px;
+}
+.group#penumpang input {
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #1ba0e1;
+}
