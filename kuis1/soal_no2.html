@@ -8,20 +8,18 @@
     <script>
       $(document).ready(function() {
         var barangArray = [
-          [1, "Celana", "Celana Kain", 100000, 2],
-          [2, "Kaos", "Kaos Oblong", 75000, 5]
+          [1, "Celana", "Celana Kain", 2, 200000],
+          [2, "Kaos", "Kaos Oblong", 5, 75000]
         ];
 
         function hitungSubTotal() {
           subTotal = 0;
-          for (let i = 0; i < barangArray.length; i++) {
-            subTotal += barangArray[i][3] * barangArray[i][4];
-          }
+          sum = barangArray[0][3] * barangArray[0][4];
+          console.log(sum);
+          subTotal += sum;
 
           $("#subTotal").val(subTotal);
         }
-
-        hitungSubTotal;
 
         $("#add-row").click(function() {
           var no = $("#no").val();
@@ -29,19 +27,6 @@
           var namaBarang = $("#namaBarang").val();
           var hargasatuan = $("#harga").val();
           var jumlahBeli = $("#jumlah").val();
-
-          // alert(
-          //   no +
-          //     " " +
-          //     jenisBarang +
-          //     " " +
-          //     namaBarang +
-          //     " " +
-          //     hargasatuan +
-          //     " " +
-          //     jumlahBeli +
-          //     " "
-          // );
 
           var markup =
             "<tr><td>" +
@@ -52,19 +37,23 @@
             namaBarang +
             "</td><td>" +
             hargasatuan +
-            "</td><td>5</td><td>" +
+            "</td><td>" +
             jumlahBeli +
-            "</td></tr>";
+            "</td><td>" +
+            jumlahBeli * hargasatuan;
+          ("</td></tr>");
 
           $("table#listBarang tbody").append(markup);
 
-          barangArray += [
+          barangArray += [ 
             parseInt(no),
             jenisBarang,
             namaBarang,
             parseInt(hargasatuan),
             parseInt(jumlahBeli)
           ];
+
+          hitungSubTotal();
         });
       });
     </script>
