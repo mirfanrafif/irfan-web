@@ -1,8 +1,133 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css" />
+    <script src="jquery/jquery-3.4.1.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <script>
+      var i = 0;
+      $(document).ready(function() {
+        $(".sliderTitle, #slider img").hide();
+        showNextImage();
+        setInterval("showNextImage()", 3000);
+      });
 
+      function showNextImage() {
+        i++;
+        $("#sliderImage" + i)
+          .appendTo("#slider")
+          .fadeIn(1100)
+          .delay(1100)
+          .fadeOut(1100);
+        if (i == 3) {
+          i = 0;
+        }
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSgmtSMlOuPzUwARO3mjffs-ddHzC36MU&callback=initMap"
+    ></script>
+    <script>
+      function initMap() {
+        var lombok = {
+          lat: -8.5830695,
+          lng: 116.3202515
+        };
+
+        var map = new google.maps.Map(document.getElementById("googleMap"), {
+          center: lombok,
+          zoom: 9
+        });
+
+        var contentString = "<h2>Hello Dunia</h2>";
+
+        var infoWindow = new google.maps.InfoWindow({
+          content: contentString,
+          position: lombok
+        });
+
+        infoWindow.open(map);
+
+        console.log();
+      }
+    </script>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      #slider {
+        position: relative;
+        width: 100%;
+        height: 420px;
+      }
+
+      #slider img {
+        width: 100%;
+        height: 420px;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+
+      .heading-1 {
+        position: absolute;
+        top: 100px;
+        color: white;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    
+    <!-- Header -->
+
+    <div class="header">
+      <div class="left">
+        <img src="img/orange.svg" class="img-icon" />
+        <label for="img-icon"><b>Wisata Petik Jeruk</b></label>
+      </div>
+      <div class="right">
+        <a href="index.html" class="link">Home</a>
+        <a href="profile.html" class="link">About Us</a>
+        <a href="" class="link">Services</a>
+        <a href="" class="link">Clients</a>
+        <a href="" class="link">Partner</a>
+        <a href="" class="link">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- Body -->
+
+    <div class="content" id="title">
+      <div id="slider">
+        <img src="img/img1.jpg" id="sliderImage1" />
+        <img src="img/img2.jpg" id="sliderImage2" />
+        <img src="img/img3.jpg" id="sliderImage3" />
+      </div>
+      <h1 class="heading-1">Wisata Petik Jeruk</h1>
+    </div>
+
+    <div class="content" id="content-1">
+      <img src="img/field2.jpg" class="img-photo" id="img-1" />
+      <h3>Apa itu Wisata Petik Jeruk?</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        tempora quisquam odio nesciunt, alias rerum minus necessitatibus natus
+        ipsa error nam eveniet temporibus maiores accusantium vitae, laudantium
+        earum reprehenderit quasi.
+      </p>
+    </div>
+
+    <div class="content" id="content-2">
+      <h3>Dimana Lokasi Wisata Petik Jeruk?</h3>
+      <div id="googleMap" style="width: 100%; height: 400px;"></div>
+    </div>
   </body>
 </html>

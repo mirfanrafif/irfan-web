@@ -16,7 +16,6 @@
           subTotal = 0;
           sum = barangArray[0][3] * barangArray[0][4];
           console.log(sum);
-          subTotal += sum;
 
           $("#subTotal").val(subTotal);
         }
@@ -40,12 +39,12 @@
             "</td><td>" +
             jumlahBeli +
             "</td><td>" +
-            jumlahBeli * hargasatuan;
-          ("</td></tr>");
+            jumlahBeli * hargasatuan +
+            "</td></tr>";
 
           $("table#listBarang tbody").append(markup);
 
-          barangArray += [ 
+          barangArray += [
             parseInt(no),
             jenisBarang,
             namaBarang,
