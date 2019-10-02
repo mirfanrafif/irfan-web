@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <title>Soal no. 2</title>
+    <link rel="stylesheet" href="no2_style.css" />
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css" />
+    <script src="jquery/jquery-3.4.1.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function() {
+        var barangArray = [
+          [1, "Celana", "Celana Kain", 100000, 2],
+          [2, "Kaos", "Kaos Oblong", 75000, 5]
+        ];
+
+        function hitungSubTotal() {
+          subTotal = 0;
+          for (let i = 0; i < barangArray.length; i++) {
+            subTotal += barangArray[i][3] * barangArray[i][4];
+          }
+
+          $("#subTotal").val(subTotal);
+        }
+
+        hitungSubTotal;
+
+        $("#add-row").click(function() {
+          var no = $("#no").val();
+          var jenisBarang = $("#jenisBarang").val();
+          var namaBarang = $("#namaBarang").val();
+          var hargasatuan = $("#harga").val();
+          var jumlahBeli = $("#jumlah").val();
+
+          // alert(
+          //   no +
+          //     " " +
+          //     jenisBarang +
+          //     " " +
+          //     namaBarang +
+          //     " " +
+          //     hargasatuan +
+          //     " " +
+          //     jumlahBeli +
+          //     " "
+          // );
+
+          var markup =
+            "<tr><td>" +
+            no +
+            "</td><td>" +
+            jenisBarang +
+            "</td><td>" +
+            namaBarang +
+            "</td><td>" +
+            hargasatuan +
+            "</td><td>5</td><td>" +
+            jumlahBeli +
+            "</td></tr>";
+
+          $("table#listBarang tbody").append(markup);
+
+          barangArray += [
+            parseInt(no),
+            jenisBarang,
+            namaBarang,
+            parseInt(hargasatuan),
+            parseInt(jumlahBeli)
+          ];
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center">Toko Indah</h1>
+    <table style="width: 100%;" id="listBarang">
+      <thead>
+        <tr>
+          <td>No.</td>
+          <td>Jenis Barang</td>
+          <td>Nama Barang</td>
+          <td>Harga Satuan</td>
+          <td>Jumlah Beli</td>
+          <td>Total</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Celana</td>
+          <td>Celana Kain</td>
+          <td>100000</td>
+          <td>2</td>
+          <td>200000</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Kaos</td>
+          <td>Kaos Oblong</td>
+          <td>75000</td>
+          <td>5</td>
+          <td>375000</td>
+        </tr>
+      </tbody>
+    </table>
+    <br /><br />
+    <table class="totalan">
+      <tbody>
+        <tr>
+          <td>Sub Total</td>
+          <td id="subTotal">0</td>
+        </tr>
+        <tr>
+          <td>Diskon</td>
+          <td id="diskon">0</td>
+        </tr>
+        <tr>
+          <td>Grand Total</td>
+          <td id="grandTotal">0</td>
+        </tr>
+        <tr>
+          <td>Bayar</td>
+          <td id="bayar">0</td>
+        </tr>
+      </tbody>
+    </table>
+    <br /><br />
+    No. : <input type="text" id="no" /> <br />
+    Jenis Barang : <input type="text" id="jenisBarang" /> <br />
+    Nama Barang : <input type="text" id="namaBarang" /> <br />
+    Harga satuan : <input type="text" id="harga" /> <br />
+    Jumlah Beli : <input type="text" id="jumlah" /> <br />
+
+    <button id="add-row">Add Row</button>
+    <button id="delete-row">Delete Row</button>
+  </body>
+</html>

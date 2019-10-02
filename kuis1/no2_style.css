@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+}
+
+table {
+  border: 1px;
+  border: 1px solid black;
+  column-gap: 0px;
+  row-gap: 0px;
+}
+
+table thead {
+  font-weight: bold;
+}
+
+table td {
+  border: 1px solid black;
+}
+
+.grid {
+  grid-template-columns: auto auto;
+}

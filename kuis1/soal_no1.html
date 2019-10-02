@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <script src="jquery/jquery-3.4.1.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="no1_style.css" />
+    <script>
+      $(document).ready(function() {
+        $("#date").datepicker();
+        $(".checkboxradio-group input").checkboxradio();
+
+        $("#send").click(function() {
+          var email = $("#email").val();
+          var error = $("#error");
+          // alert(email);
+          if (email == "") {
+            error.show();
+          } else {
+            error.hide();
+          }
+        });
+      });
+    </script>
+    <title>Soal no. 1</title>
+  </head>
+  <body>
+    <div class="form-group">
+      <div class="grid">
+        <div class="checkboxradio-group">
+          <h2 style="margin-top: 0;">
+            Select the category
+          </h2>
+          <input type="radio" name="category" id="radio-1" /><label
+            for="radio-1"
+            >VIP</label
+          >
+          <input type="radio" name="category" id="radio-2" /><label
+            for="radio-2"
+            >Premium</label
+          >
+          <input type="radio" name="category" id="radio-3" /><label
+            for="radio-3"
+            >Basic</label
+          >
+        </div>
+        <div class="checkboxradio-group">
+          <h2 style="margin-top: 0;">Select</h2>
+          <input type="checkbox" name="breakfast" id="checkbox-1" /><label
+            for="checkbox-1"
+            >Breakfast</label
+          >
+          <input type="checkbox" name="lunch" id="checkbox-2" /><label
+            for="checkbox-2"
+            >Lunch</label
+          >
+          <input type="checkbox" name="dinner" id="checkbox-3" /><label
+            for="checkbox-3"
+            >Diner</label
+          >
+        </div>
+      </div>
+
+      <br />
+      Date : <input type="text" id="date" class="input-text" /><br />
+      Name :
+      <input
+        type="text"
+        id="name"
+        placeholder="Irfan Rafif"
+        class="input-text"
+      /><br />
+      Phone :
+      <input
+        type="text"
+        id="phone"
+        placeholder="+6287-0000-1234"
+        class="input-text"
+      /><br />
+      <br />
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="5"
+        placeholder="Message"
+        class="input-text"
+      ></textarea
+      ><br />
+      <br />
+      <div class="email-group">
+        Send to Email :
+        <input
+          type="email"
+          id="email"
+          placeholder="irfanrafif@gmail.com"
+          class="input-text"
+        />
+        <label for="email" id="error" style="color: red; display: none;"
+          >Email is Required</label
+        >
+        <br />
+      </div>
+      <button id="send" type="submit">Send</button
+      ><button id="reset">Reset</button>
+    </div>
+  </body>
+</html>

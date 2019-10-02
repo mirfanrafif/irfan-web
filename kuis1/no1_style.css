@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+}
+.form-group {
+  position: relative;
+  width: 956px;
+  height: 400px;
+  left: calc(50% - 956px / 2 + 0.5px);
+  top: 125px;
+
+  background: white;
+  border: 10px solid rgb(47, 144, 255);
+  padding: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.input-text {
+  padding: 5px 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 0.5px solid rgb(47, 144, 255);
+}
