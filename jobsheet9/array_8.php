@@ -1,0 +1,24 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <h2>Sorting Array</h2>
+    <?php 
+    $age = array(
+      "Joe" => "29",
+      "Elisa" => "27",
+      "Kevin" => "32",
+      "Nick" => "24",
+      "Olaf" => "9",
+      "Ana" => "17"
+    );
+
+    asort($age);
+
+    foreach($age as $name => $value){
+      echo "name = " . $name . ", age = " . $value . "<br>";
+    }
+    ?>
+  </body>
+</html>
