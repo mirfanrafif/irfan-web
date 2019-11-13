@@ -1,0 +1,17 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <?php
+  $myFile = "id.txt";
+  $fh = fopen($myFile, 'r');
+  $theData = fread($fh, filesize($myFile));
+  fclose($fh);
+  echo $theData;
+  ?>
+</body>
+
+</html>

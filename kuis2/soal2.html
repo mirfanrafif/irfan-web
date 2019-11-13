@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Soal no. 2</title>
+    <script src="jquery/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#segitiga").click(function() {
+          $(".bentukInput").hide();
+          $("#formSegitiga").show();
+        });
+        $("#lingkaran").click(function() {
+          $(".bentukInput").hide();
+          $("#formLingkaran").show();
+        });
+        $("#persegiPjg").click(function() {
+          $(".bentukInput").hide();
+          $("#formPersegiPjg").show();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <button id="segitiga">Segitiga</button>
+      <button id="lingkaran">Lingkaran</button>
+      <button id="persegiPjg">Persegi Panjang</button>
+    </div>
+    <br /><br />
+    <div id="isian">
+      <form
+        class="bentukInput"
+        id="formSegitiga"
+        action="soal2_2.php"
+        method="post"
+        style="display: none;"
+      >
+        <label for="panjang">Panjang</label>
+        <input type="text" name="panjang" id="panjang" />
+        <label for="tinggi">Tinggi</label>
+        <input type="text" name="tinggi" id="tinggi" />
+        <input type="hidden" name="bentuk" value="segitiga" />
+        <input type="submit" value="submit" name="submit" />
+      </form>
+      <form
+        class="bentukInput"
+        id="formLingkaran"
+        action="soal2_2.php"
+        method="post"
+        style="display: none;"
+      >
+        <label for="panjang">Jari-Jari</label>
+        <input type="text" name="radius" id="panjang" />
+        <input type="hidden" name="bentuk" value="lingkaran" />
+        <input type="submit" value="submit" name="submit" />
+      </form>
+      <form
+        class="bentukInput"
+        id="formPersegiPjg"
+        action="soal2_2.php"
+        method="post"
+        style="display: none;"
+      >
+        <label for="panjang">Panjang</label>
+        <input type="text" name="panjang" id="panjang" />
+        <label for="tinggi">Tinggi</label>
+        <input type="text" name="tinggi" id="tinggi" />
+        <input type="hidden" name="bentuk" value="persegi_panjang" />
+        <input type="submit" value="submit" name="submit" />
+      </form>
+    </div>
+  </body>
+</html>
